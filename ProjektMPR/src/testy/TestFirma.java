@@ -51,7 +51,7 @@ public class TestFirma {
 	}
 
 	@Test
-	public void testSetName() {
+	public void testUstawNazweFirmy() {
 	firmatest.ustawNazwefirmy("Onet");
 	assertTrue(firmatest.pobierzNazweFirmy() == "Onet");
 	}
@@ -67,7 +67,7 @@ public class TestFirma {
 
 	
 	@Test
-	public void testFindBooksTitle() {
+	public void testZnajdzNazwySamochodow() {
 	assertNotNull(firmatest.znajdzNazwySamochodow("Legend"));
 	assertTrue(firmatest.znajdzNazwySamochodow("Legend").size() > 0 );
 	}
