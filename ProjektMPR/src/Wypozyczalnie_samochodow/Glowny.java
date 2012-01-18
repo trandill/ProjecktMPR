@@ -24,15 +24,15 @@ public class Glowny {
 		List<Samochod> listasamochodow = new ArrayList<Samochod>();
 		List<Samochod> listasamochodow2 = new ArrayList<Samochod>();
 		
-		Firma firma = new Firma("PW onet", 582456547 , listasamochodow);
-		Firma firma2 = new Firma("Koniec", 584248748 , listasamochodow2);
+		Firma firma = new Firma("PW onet", "582456547" , listasamochodow);
+		Firma firma2 = new Firma("Koniec", "584248748" , listasamochodow2);
 		
 		listafirm.add(firma);
 		listafirm.add(firma2);
 		
 		
-		Samochod sam1 = new Samochod("Maluch 126p", Rodzajesamochodow.Fiat, 30.40);
-		Samochod sam2 = new Samochod("458 italia", Rodzajesamochodow.Ferrari, 503.45);
+		Samochod sam1 = new Samochod("Maluch 126p", "Fiat", 30.40);
+		Samochod sam2 = new Samochod("458 italia", "Ferrari", 503.45);
 		Samochod sam3 = new Samochod("CRV ",50.50);
 		
 		try {
@@ -50,7 +50,7 @@ public class Glowny {
 		}
 		
 		
-		sam3.ustawMarka(Rodzajesamochodow.Honda);
+		sam3.ustawMarka("Honda");
 		
 		firma.dodajsamochod(sam1);
 		firma.dodajsamochod(sam2);

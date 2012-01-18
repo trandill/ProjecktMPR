@@ -10,7 +10,7 @@ import org.junit.Test;
 import Wypozyczalnie_samochodow.*;
 
 public class TestFirma {
-	Firma firmatest = new Firma("Aniol", 5842453 );
+	Firma firmatest = new Firma("Aniol", "5842453" );
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -22,7 +22,7 @@ public class TestFirma {
 
 	@Before
 	public void setUp() throws Exception {
-	Samochod sam = new Samochod("Legend", Rodzajesamochodow.Honda , 1111);
+	Samochod sam = new Samochod("Legend", "Honda" , 1111);
 	firmatest.dodajsamochod(sam);
 	}
 
@@ -32,8 +32,8 @@ public class TestFirma {
 
 	@Test
 	public void testFirma() throws SprawdzKosztUtrzymania {
-	Firma firmatest2 = new Firma("g-Data", 65542453);
-	Samochod sam2 = new Samochod("VTX", Rodzajesamochodow.Honda, 19.8);
+	Firma firmatest2 = new Firma("g-Data", "65542453");
+	Samochod sam2 = new Samochod("VTX", "Honda", 19.8);
 	firmatest2.dodajsamochod(sam2);
 	assertTrue(firmatest2.pobierzListeSamochodow().size() == 1);
 	assertTrue(firmatest2.pobierzNazweFirmy().equals("g-Data"));

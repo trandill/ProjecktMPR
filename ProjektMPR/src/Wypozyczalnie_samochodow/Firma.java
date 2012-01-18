@@ -12,17 +12,23 @@ public class Firma {
 
 	public Integer ID;
 	public String nazwaFirmy;
-	public Integer NIP;
+	public String NIP;
 		
 	public List<Samochod> listaSamochod = new ArrayList<Samochod>();
 	
-	public Firma(String nazwaFirmy, Integer NIP)
+	
+	public Firma()
+	{
+		
+	}
+	
+	public Firma(String nazwaFirmy, String NIP)
 	{
 		this.nazwaFirmy = nazwaFirmy;
 		this.NIP = NIP;
 	}
 	
-	public Firma(String nazwaFirmy, Integer NIP, List<Samochod> listaSamochod)
+	public Firma(String nazwaFirmy, String NIP, List<Samochod> listaSamochod)
 	{
 		this.nazwaFirmy = nazwaFirmy;
 		this.NIP = NIP;
@@ -126,11 +132,11 @@ public class Firma {
 		logger.info("Ustawiono nazwe firmy" + nazwaFirmy);
 	}
 
-	public Integer pobierzNIP(Integer NIP) {
+	public String pobierzNIP() {
 		return NIP;
 	}
 
-	public void ustawNIP(Integer NIP) {
+	public void ustawNIP(String NIP) {
 		this.NIP = NIP;
 		logger.info("NIP Firmy to" + NIP);
 	}
@@ -142,6 +148,15 @@ public class Firma {
 	public void ustawListeSamochodow(List<Samochod> listaSamochod) {
 		this.listaSamochod = listaSamochod;
 		logger.info("wczytano liste samochodow" );
+	}
+	
+	public Integer pobierzId() {
+		return ID;
+	}
+
+	public void ustawID(Integer ID) {
+		this.ID = ID;
+		logger.info("ID Firmy to" + ID);
 	}
 	
 }

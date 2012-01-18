@@ -11,7 +11,7 @@ import org.junit.Test;
 import Wypozyczalnie_samochodow.*;
 
 public class testSamochod {
-	Firma firmatest = new Firma("Aniol", 5842453 );
+	Firma firmatest = new Firma("Aniol", "5842453" );
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -23,7 +23,7 @@ public class testSamochod {
 
 	@Before
 	public void setUp() throws Exception {
-	Samochod sam = new Samochod("ducato", Rodzajesamochodow.Fiat, 19.8);
+	Samochod sam = new Samochod("ducato", "Fiat", 19.8);
 	firmatest.dodajsamochod(sam);
 	}
 

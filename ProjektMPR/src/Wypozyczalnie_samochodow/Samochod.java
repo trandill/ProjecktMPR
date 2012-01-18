@@ -4,18 +4,18 @@ package Wypozyczalnie_samochodow;
 
 
 public class Samochod {
-
+	public Integer ID;
 	public String nazwa;
 	private double kosztUtrzymania;
 	public Integer rokProdukcji;
-	public Rodzajesamochodow marka;
+	public String marka;
 	public boolean myjnia;
 	
+	public Samochod(){}
 	
 	
 	
-	
-	public Samochod(String nazwa,Rodzajesamochodow  marka, Integer rokProdukcji, Double kosztUtrzymania)
+	public Samochod(String nazwa,String  marka, Integer rokProdukcji, Double kosztUtrzymania)
 	{
 		this.nazwa=nazwa ;
 		this.marka=marka;
@@ -23,7 +23,7 @@ public class Samochod {
 		this.kosztUtrzymania=kosztUtrzymania;
 	}
 	
-	public Samochod(String nazwa,Rodzajesamochodow  marka, Double kosztUtrzymania)
+	public Samochod(String nazwa,String  marka, Double kosztUtrzymania)
 	{
 		this.nazwa=nazwa ;
 		this.marka=marka;
@@ -34,7 +34,7 @@ public class Samochod {
 		this.nazwa=nazwa ;
 		this.kosztUtrzymania=kosztUtrzymania;
 	}
-	public Samochod(String nazwa,Rodzajesamochodow  marka, Integer rokProdukcji)
+	public Samochod(String nazwa,String  marka, Integer rokProdukcji)
 	{
 		this.nazwa=nazwa ;
 		this.marka=marka;
@@ -70,11 +70,11 @@ public class Samochod {
 		this.nazwa = nazwa;
 	}
 				
-	public Rodzajesamochodow poberzMarka() {
+	public String poberzMarka() {
 		return marka;
 	}
 	
-	public void ustawMarka(Rodzajesamochodow marka) {
+	public void ustawMarka(String marka) {
 		this.marka = marka;
 	}
 	
@@ -92,6 +92,14 @@ public class Samochod {
 
 	public void ustawKosztUtrzymania(Double kosztUtrzymania) throws SprawdzKosztUtrzymania {
 		this.kosztUtrzymania = kosztUtrzymania;
+	}
+	
+	public Integer pobierzID() {
+		return ID;
+	}
+
+	public void ustawID(Integer Id) {
+		this.ID = ID;
 	}
 	
 
